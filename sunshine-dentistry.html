@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sunshine Dentistry — Tampa Dentist | Dr. Daira & Dr. Daima Avila</title>
+<meta name="description" content="Family and cosmetic dentistry in North Tampa from Dr. Daira & Dr. Daima Avila. Free lifetime whitening for new patients, Invisalign, and now Botox. Book online in seconds. Se habla español."/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='7' fill='%23F5A623'/><g stroke='%23F5A623' stroke-width='2.4' stroke-linecap='round'><path d='M16 2v4M16 26v4M2 16h4M26 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3'/></g></svg>"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config={theme:{extend:{
+ screens:{xs:"400px"},
+ colors:{
+  ink:"#26231C",
+  cream:"#FFFBF2",
+  sun:{DEFAULT:"#F5A623",soft:"#FDEBC8",deep:"#D2831A",glow:"#FFC85C"},
+  pine:{DEFAULT:"#2F6B52",soft:"#DDEAE2",deep:"#22503D"},
+  sky:"#8A8578"
+ },
+ fontFamily:{display:["Fraunces","serif"],sans:["Outfit","system-ui","sans-serif"]},
+ boxShadow:{soft:"0 1px 2px rgba(38,35,28,.04),0 12px 32px rgba(210,131,26,.08)",lift:"0 22px 60px rgba(210,131,26,.18)"}
+}}}
+</script>
+<style>
+ body{font-family:Outfit,system-ui,sans-serif;background:#FFFBF2;color:#26231C}
+ .font-display{font-family:Fraunces,serif}
+ html{scroll-behavior:smooth}
+ img{max-width:100%;height:auto}
+ ::selection{background:#F5A623;color:#26231C}
+ :focus-visible{outline:2px solid #2F6B52;outline-offset:3px;border-radius:4px}
+ /* the sunshine ray backdrop */
+ .rays{background:
+   radial-gradient(60% 55% at 78% 12%, rgba(255,200,92,.35) 0%, rgba(255,200,92,.10) 40%, transparent 72%),
+   conic-gradient(from 200deg at 88% 6%, rgba(245,166,35,.14) 0deg, transparent 28deg, rgba(245,166,35,.10) 56deg, transparent 84deg, rgba(245,166,35,.12) 112deg, transparent 140deg);}
+ @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+ .marq{animation:marq 34s linear infinite}
+ .marq-wrap:hover .marq{animation-play-state:paused}
+ @keyframes bob{0%,80%,100%{transform:translateY(0);opacity:.4}40%{transform:translateY(-4px);opacity:1}}
+ .dot{animation:bob 1.2s infinite}
+ @keyframes spin{to{transform:rotate(360deg)}}
+ .sunspin{animation:spin 40s linear infinite}
+ .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+ .reveal.on{opacity:1;transform:none}
+ @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+ @media(max-width:640px){.float{position:static!important;margin-top:1rem;max-width:100%!important}}
+ .note{position:fixed;bottom:12px;left:12px;z-index:40;background:#26231C;color:#FFFBF2;font-size:11px;padding:6px 12px;border-radius:999px;opacity:.85}
+ @media(max-width:640px){.note{display:none}}
+</style>
+</head>
+<body>
+<div class="note">Concept redesign for Sunshine Dentistry — booking &amp; assistant demo</div>
+
+<!-- ================= NAV ================= -->
+<header id="hdr" class="fixed inset-x-0 top-0 z-50 transition-colors">
+ <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+  <a href="#top" class="flex items-center gap-2.5">
+   <span class="relative grid h-10 w-10 place-items-center rounded-full bg-sun">
+    <svg class="sunspin" width="22" height="22" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="6" fill="#FFFBF2"/><g stroke="#FFFBF2" stroke-width="2.2" stroke-linecap="round"><path d="M16 3v3M16 26v3M3 16h3M26 16h3M6.5 6.5l2 2M23.5 23.5l2 2M25.5 6.5l-2 2M8.5 23.5l-2 2"/></g></svg>
+   </span>
+   <span class="font-display text-lg leading-none text-ink">Sunshine<span class="block font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-sun-deep">Dentistry</span></span>
+  </a>
+  <nav class="hidden items-center gap-7 text-sm text-ink/75 lg:flex">
+   <a href="#services" class="hover:text-sun-deep">Services</a>
+   <a href="#special" class="hover:text-sun-deep">New patients</a>
+   <a href="#doctors" class="hover:text-sun-deep">Meet the doctors</a>
+   <a href="#reviews" class="hover:text-sun-deep">Reviews</a>
+   <a href="#insurance" class="hover:text-sun-deep">Insurance</a>
+  </nav>
+  <div class="hidden items-center gap-3 lg:flex">
+   <a href="tel:+18132699360" class="text-sm font-semibold text-ink hover:text-sun-deep">(813) 269-9360</a>
+   <a href="#book" class="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-cream transition-colors hover:bg-sun-deep">Book online</a>
+  </div>
+  <button id="burger" class="grid h-10 w-10 place-items-center rounded-lg text-ink lg:hidden" aria-label="Menu" aria-expanded="false">
+   <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+ </div>
+ <div id="mnav" class="hidden border-t border-ink/[0.07] bg-cream/95 backdrop-blur lg:hidden">
+  <div class="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-4">
+   <a href="#services" class="rounded-lg px-3 py-2.5 text-ink hover:bg-white">Services</a>
+   <a href="#special" class="rounded-lg px-3 py-2.5 text-ink hover:bg-white">New patients</a>
+   <a href="#doctors" class="rounded-lg px-3 py-2.5 text-ink hover:bg-white">Meet the doctors</a>
+   <a href="#reviews" class="rounded-lg px-3 py-2.5 text-ink hover:bg-white">Reviews</a>
+   <a href="#insurance" class="rounded-lg px-3 py-2.5 text-ink hover:bg-white">Insurance</a>
+   <a href="#book" class="mt-2 rounded-full bg-ink px-5 py-3 text-center text-sm font-semibold text-cream">Book online</a>
+   <a href="tel:+18132699360" class="py-2 text-center text-sm font-semibold text-ink">(813) 269-9360</a>
+  </div>
+ </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="top" class="rays relative overflow-hidden bg-cream pt-24 pb-16 md:pt-32 md:pb-24">
+ <div class="relative mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-[1.05fr_.95fr]">
+  <div>
+   <p class="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-pine">
+    <span class="h-px w-8 bg-pine/50"></span>Tampa · North Florida Ave · Se habla español
+   </p>
+
+   <h1 class="mt-6 font-display text-[2.5rem] font-medium leading-[1.05] text-ink xs:text-[3.1rem] sm:text-[4.1rem]">
+    Changing lives
+    <br>one smile
+    <span class="italic text-sun-deep">at a time.</span>
+   </h1>
+
+   <p class="mt-6 max-w-md text-lg leading-relaxed text-sky">
+    Family and cosmetic dentistry in North Tampa from Dr. Daira and Dr. Daima
+    Avila — sisters who'll learn your name on the first visit and explain
+    everything before they begin.
+   </p>
+
+   <div class="mt-8 flex flex-wrap items-center gap-3">
+    <a href="#book" class="group inline-flex items-center gap-2 rounded-full bg-ink px-8 py-4 text-sm font-semibold text-cream transition-colors hover:bg-sun-deep">
+     Find a time <span class="transition-transform group-hover:translate-x-0.5">→</span>
+    </a>
+    <a href="tel:+18132699360" class="inline-flex items-center gap-2 rounded-full border border-ink/15 px-7 py-4 text-sm font-semibold text-ink transition-colors hover:border-sun">
+     <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5c0 8 7 15 15 15l1.5-3.5-4-1.5-1.5 1.5c-2-1-4-3-5-5l1.5-1.5-1.5-4L4 5Z"/></svg>
+     (813) 269-9360
+    </a>
+   </div>
+
+   <div class="mt-7 flex w-full max-w-sm flex-wrap items-center gap-3 rounded-2xl border border-ink/[0.07] bg-white px-5 py-3.5 shadow-soft sm:w-auto">
+    <span class="relative flex h-2.5 w-2.5">
+     <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-pine opacity-60"></span>
+     <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-pine"></span>
+    </span>
+    <p class="text-sm text-sky"><span class="font-semibold text-ink">Next available:</span> Tuesday, 5:20 PM</p>
+    <a href="#book" class="text-sm font-semibold text-sun-deep underline-offset-4 hover:underline">Take it</a>
+   </div>
+
+   <div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm">
+    <span class="flex items-center gap-2"><span class="text-sun">★★★★★</span><span class="font-semibold text-ink">4.7</span><span class="text-sky">on Google &amp; Yelp</span></span>
+    <span class="hidden h-4 w-px bg-ink/15 sm:block"></span>
+    <span class="text-sky">Tampa favorite since <span class="font-semibold text-ink">2016</span></span>
+   </div>
+  </div>
+
+  <div class="relative">
+   <div class="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem] bg-sun-soft shadow-lift">
+    <img src="/Screenshot 2026-07-15 055250.png" alt="Dr. Avila with a patient at Sunshine Dentistry" class="h-full w-full object-cover" onerror="this.style.display='none'"/>
+    <div class="pointer-events-none absolute inset-0" style="background:linear-gradient(to top,rgba(38,35,28,.28),transparent 55%)"></div>
+   </div>
+
+   <!-- floating: free whitening -->
+   <div class="float absolute -left-4 top-8 flex items-center gap-2.5 rounded-2xl bg-white px-4 py-3 shadow-lift sm:-left-8">
+    <span class="grid h-9 w-9 place-items-center rounded-full bg-sun-soft text-sun-deep">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.2 4.6L19 8.4l-3.5 3.4.8 4.9L12 14.9 7.7 16.7l.8-4.9L5 8.4l4.8-.8L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    </span>
+    <p class="text-xs leading-tight"><span class="block font-semibold text-ink">Free whitening</span><span class="text-sky">For new patients · for life</span></p>
+   </div>
+
+   <!-- floating: quote -->
+   <figure class="float absolute -bottom-6 -right-2 max-w-[18rem] rounded-2xl bg-ink p-6 text-cream shadow-lift sm:-right-8">
+    <span class="text-sun text-sm">★★★★★</span>
+    <blockquote class="mt-3 font-display text-[1.02rem] italic leading-snug">“After years in Tampa, I've finally found a practice I trust. This office is a Tampa gem.”</blockquote>
+    <figcaption class="mt-3 text-xs text-cream/60">— verified patient review</figcaption>
+   </figure>
+  </div>
+ </div>
+</section>
+
+<!-- ================= NEW PATIENT SPECIAL (their real offers) ================= -->
+<section id="special" class="scroll-mt-16 bg-ink py-16 text-cream md:py-24">
+ <div class="mx-auto max-w-6xl px-5">
+  <div class="grid items-center gap-10 lg:grid-cols-[1.1fr_.9fr]">
+   <div>
+    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-sun">New here?</p>
+    <h2 class="mt-4 font-display text-4xl font-medium leading-[1.1] sm:text-5xl">We think you deserve<br><span class="italic text-sun">something special.</span></h2>
+    <p class="mt-5 max-w-md leading-relaxed text-cream/70">Every new patient gets our <strong class="font-semibold text-cream">$99 welcome exam</strong> — and free teeth whitening you keep topping up for as long as you're a patient.</p>
+    <div id="special-list" class="mt-8 grid gap-3 sm:grid-cols-2"></div>
+    <a href="#book" class="mt-8 inline-block rounded-full bg-sun px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:bg-sun-glow">Claim the new-patient offer</a>
+   </div>
+   <div class="relative">
+    <div class="rounded-[2rem] bg-gradient-to-br from-sun to-sun-deep p-8 text-ink shadow-lift">
+     <p class="font-display text-sm uppercase tracking-wide">New patient special</p>
+     <p class="mt-2 font-display text-6xl font-semibold">$99</p>
+     <p class="text-ink/70">exam · X-rays · oral cancer screening</p>
+     <div class="mt-6 space-y-2 border-t border-ink/15 pt-6 text-sm">
+      <p class="flex items-center gap-2"><span class="text-ink">✓</span> Free lifetime whitening included</p>
+      <p class="flex items-center gap-2"><span class="text-ink">✓</span> Financing options available</p>
+      <p class="flex items-center gap-2"><span class="text-ink">✓</span> Now offering Botox · $11/unit</p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="scroll-mt-16 bg-cream py-16 md:py-28">
+ <div class="mx-auto max-w-6xl px-5">
+  <div class="max-w-xl">
+   <p class="text-xs font-semibold uppercase tracking-[0.2em] text-pine">What we do</p>
+   <h2 class="mt-4 font-display text-4xl font-medium leading-[1.1] text-ink sm:text-5xl">Every smile in the family.<span class="italic text-sun-deep"> One bright office.</span></h2>
+   <p class="mt-4 text-lg text-sky">From routine cleanings to a full smile makeover — Dr. Avila treats every case as a cosmetic case, so it lasts and it looks beautiful.</p>
+  </div>
+  <div id="svc" class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+ </div>
+</section>
+
+<!-- ================= DOCTORS ================= -->
+<section id="doctors" class="scroll-mt-16 bg-pine-deep py-16 text-cream md:py-28">
+ <div class="mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-[1.05fr_.95fr]">
+  <div>
+   <p class="text-xs font-semibold uppercase tracking-[0.2em] text-sun">Meet the doctors</p>
+   <h2 class="mt-4 font-display text-4xl font-medium leading-[1.1] sm:text-5xl">Two sisters.<br><span class="italic text-sun">One chair you'll actually like.</span></h2>
+   <div class="mt-6 space-y-4 leading-relaxed text-cream/75">
+    <p>Dr. Daira Avila is a proud University of Florida graduate — Doctorate in Dental Medicine and undergrad, Go Gators. She's Invisalign certified, treats every case as a cosmetic case, and has spent hundreds of hours in continuing education on the latest techniques.</p>
+    <p>She's joined by her sister, Dr. Daima Avila. Together they've built the kind of practice patients stay with for a decade — the kind where the staff learns your name on the first visit.</p>
+    <p>When she's not in the chair, Dr. Daira volunteers dental care to underprivileged communities across Florida and the Caribbean.</p>
+   </div>
+   <ul id="creds" class="mt-8 grid gap-3 sm:grid-cols-2"></ul>
+  </div>
+  <div class="relative">
+   <div class="aspect-[4/5] w-full max-w-sm overflow-hidden rounded-[2rem] bg-pine shadow-lift mx-auto">
+    <img src="/Screenshot 2026-07-15 055324.png" alt="Dr. Daira and Dr. Daima Avila" class="h-full w-full object-cover" onerror="this.style.display='none'"/>
+   </div>
+   <div class="float absolute -bottom-5 -left-3 rounded-2xl bg-sun px-5 py-4 text-ink shadow-lift sm:-left-6">
+    <p class="font-display text-2xl font-semibold leading-none">10+ yrs</p>
+    <p class="mt-1 text-xs">patients who never left</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ================= AI ASSISTANT ================= -->
+<section id="assistant" class="scroll-mt-16 bg-cream py-16 md:py-28">
+ <div class="mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-2">
+  <div>
+   <p class="text-xs font-semibold uppercase tracking-[0.2em] text-pine">Always on</p>
+   <h2 class="mt-4 font-display text-4xl font-medium leading-[1.1] text-ink sm:text-5xl">The front desk,<br><span class="italic text-sun-deep">after hours.</span></h2>
+   <p class="mt-5 max-w-md leading-relaxed text-sky">Patients ask the same questions at 10 PM that they ask at 10 AM — do you take my insurance, is the whitening really free, do you speak Spanish, can I get Botox here. The assistant answers instantly, in English or Spanish, and books the visit before they call anywhere else.</p>
+   <dl id="afeat" class="mt-8 grid gap-5 sm:grid-cols-2"></dl>
+  </div>
+  <div>
+   <div class="overflow-hidden rounded-3xl border border-ink/[0.07] bg-white shadow-lift">
+    <div class="flex items-center gap-3 border-b border-ink/[0.07] px-5 py-4">
+     <span class="grid h-9 w-9 place-items-center rounded-full bg-sun text-sm font-bold text-ink">☀</span>
+     <div><p class="text-sm font-semibold text-ink">Sunshine Assistant</p><p class="flex items-center gap-1.5 text-xs text-sky"><span class="h-1.5 w-1.5 rounded-full bg-pine"></span>Online now</p></div>
+    </div>
+    <div id="chat" class="flex min-h-[420px] flex-col gap-3 p-5"></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section id="reviews" class="scroll-mt-16 bg-sun-soft/40 py-16 md:py-28">
+ <div class="mx-auto max-w-6xl px-5">
+  <div class="flex flex-wrap items-end justify-between gap-6">
+   <div class="max-w-xl">
+    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-pine">Your trust, our priority</p>
+    <h2 class="mt-4 font-display text-4xl font-medium leading-[1.1] text-ink sm:text-5xl">Here's what our<span class="italic text-sun-deep"> patients are saying.</span></h2>
+   </div>
+   <div class="flex items-center gap-2 text-sm">
+    <span class="text-sun text-lg">★★★★★</span><span class="font-semibold text-ink">4.7</span><span class="text-sky">Google · Yelp · 10+ year patients</span>
+   </div>
+  </div>
+  <div id="revs" class="mt-12 grid gap-5 md:grid-cols-3"></div>
+ </div>
+</section>
+
+<!-- ================= INSURANCE ================= -->
+<section id="insurance" class="scroll-mt-16 border-y border-ink/[0.07] bg-cream py-14">
+ <div class="mx-auto max-w-6xl px-5">
+  <div class="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
+   <div>
+    <h2 class="font-display text-3xl font-medium text-ink sm:text-4xl">“Do you take my insurance?”</h2>
+    <p class="mt-3 max-w-lg text-sky">Most likely, yes — and if not, ask about our in-house financing so care stays affordable. Our front desk will check your exact coverage before you sit down.</p>
+   </div>
+   <a href="tel:+18132699360" class="justify-self-start rounded-full border border-ink/15 px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-sun md:justify-self-end">Check my coverage</a>
+  </div>
+  <div class="marq-wrap relative mt-10 overflow-hidden" style="mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)">
+   <div class="marq flex w-max items-center gap-12 font-display text-xl text-ink/35">
+    <span>Delta Dental</span><span>Cigna</span><span>Aetna</span><span>MetLife</span><span>Humana</span><span>Guardian</span><span>United Healthcare</span><span>BlueCross BlueShield</span><span>Principal</span><span>Financing available</span>
+    <span>Delta Dental</span><span>Cigna</span><span>Aetna</span><span>MetLife</span><span>Humana</span><span>Guardian</span><span>United Healthcare</span><span>BlueCross BlueShield</span><span>Principal</span><span>Financing available</span>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ================= BOOKING ================= -->
+<section id="book" class="scroll-mt-16 bg-ink py-16 text-cream md:py-28">
+ <div class="mx-auto max-w-6xl px-5">
+  <div class="grid gap-10 lg:grid-cols-[.85fr_1.15fr] lg:gap-16">
+   <div>
+    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-sun">Book online</p>
+    <h2 class="mt-4 font-display text-4xl font-medium leading-[1.1] sm:text-5xl">Pick a time.<br><span class="italic text-sun">You're booked.</span></h2>
+    <p class="mt-5 max-w-sm leading-relaxed text-cream/70">No phone tag, no waiting for a callback. Choose a slot and you're confirmed instantly — with a reminder by text and email.</p>
+    <ul id="reasons" class="mt-8 space-y-4"></ul>
+    <p class="mt-8 text-sm text-cream/60">Rather talk to a person? <a href="tel:+18132699360" class="font-semibold text-sun underline-offset-4 hover:underline">(813) 269-9360</a></p>
+   </div>
+
+   <div class="rounded-2xl bg-cream p-4 shadow-lift sm:p-8">
+    <div class="flex items-center justify-between">
+     <div><p class="font-display text-xl text-ink">July 2026</p><p class="mt-0.5 text-xs text-sky">Select a day</p></div>
+     <div class="flex gap-1.5">
+      <button class="grid h-8 w-8 place-items-center rounded-lg border border-ink/10 text-sky hover:border-sun" aria-label="Previous">‹</button>
+      <button class="grid h-8 w-8 place-items-center rounded-lg border border-ink/10 text-sky hover:border-sun" aria-label="Next">›</button>
+     </div>
+    </div>
+    <div class="mt-6 grid grid-cols-7 gap-1 text-center text-[10px] font-semibold uppercase tracking-wide text-sky">
+     <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+    </div>
+    <div id="cal-days" class="mt-2 grid grid-cols-7 gap-1"></div>
+    <div class="mt-7 border-t border-ink/[0.08] pt-6">
+     <p id="slot-label" class="text-sm font-semibold text-ink">Available times</p>
+     <div id="cal-slots" class="mt-3 grid grid-cols-3 gap-2"></div>
+    </div>
+    <button id="confirm" class="mt-7 w-full rounded-full bg-ink py-4 text-sm font-semibold text-cream transition-colors hover:bg-sun-deep">Confirm booking</button>
+    <p class="mt-3 text-center text-xs text-sky">Instant confirmation · reminder by text &amp; email</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="scroll-mt-16 bg-cream py-16 md:py-24">
+ <div class="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-2">
+  <div>
+   <p class="text-xs font-semibold uppercase tracking-[0.2em] text-pine">Visit us</p>
+   <h2 class="mt-4 font-display text-4xl font-medium leading-[1.1] text-ink sm:text-5xl">Come feel<span class="italic text-sun-deep"> the sunshine.</span></h2>
+   <dl class="mt-10 space-y-7 text-sm">
+    <div class="flex gap-4">
+     <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-sun-soft text-sun-deep"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+     <div><dt class="text-xs font-semibold uppercase tracking-wide text-sky">Address</dt><dd class="mt-1 text-ink">14953 N Florida Ave<br>Tampa, FL 33613 · next to Aldi &amp; Ross</dd></div>
+    </div>
+    <div class="flex gap-4">
+     <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-sun-soft text-sun-deep"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5c0 8 7 15 15 15l1.5-3.5-4-1.5-1.5 1.5c-2-1-4-3-5-5l1.5-1.5-1.5-4L4 5Z"/></svg></span>
+     <div><dt class="text-xs font-semibold uppercase tracking-wide text-sky">Contact</dt><dd class="mt-1 text-ink"><a href="tel:+18132699360" class="hover:text-sun-deep">(813) 269-9360</a><br><a href="mailto:dravila@sunshinedentistrytampa.com" class="hover:text-sun-deep break-all">dravila@sunshinedentistrytampa.com</a></dd></div>
+    </div>
+    <div class="flex gap-4">
+     <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-sun-soft text-sun-deep"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+     <div class="flex-1"><dt class="text-xs font-semibold uppercase tracking-wide text-sky">Hours</dt><dd id="hours" class="mt-1 space-y-1"></dd></div>
+    </div>
+   </dl>
+   <div class="mt-9 flex flex-wrap gap-3">
+    <a href="#book" class="rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-cream transition-colors hover:bg-sun-deep">Book online</a>
+    <a href="https://maps.google.com/?q=14953+N+Florida+Ave+Tampa+FL+33613" target="_blank" rel="noopener" class="rounded-full border border-ink/15 px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-sun">Get directions</a>
+   </div>
+  </div>
+  <div class="overflow-hidden rounded-3xl border border-ink/[0.07] shadow-soft">
+   <iframe title="Sunshine Dentistry location" src="https://maps.google.com/maps?q=14953+N+Florida+Ave+Tampa+FL+33613&z=15&output=embed" class="h-full min-h-[420px] w-full" loading="lazy"></iframe>
+  </div>
+ </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-ink py-14 text-cream/70">
+ <div class="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-[1.6fr_1fr_1fr]">
+  <div>
+   <div class="flex items-center gap-2.5">
+    <span class="grid h-9 w-9 place-items-center rounded-full bg-sun"><svg width="20" height="20" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="6" fill="#26231C"/><g stroke="#26231C" stroke-width="2.2" stroke-linecap="round"><path d="M16 3v3M16 26v3M3 16h3M26 16h3M6.5 6.5l2 2M23.5 23.5l2 2M25.5 6.5l-2 2M8.5 23.5l-2 2"/></g></svg></span>
+    <p class="font-display text-2xl text-cream">Sunshine Dentistry</p>
+   </div>
+   <p class="mt-3 max-w-xs text-sm text-cream/50">Changing lives one smile at a time, in North Tampa since 2016.</p>
+   <p class="mt-3 text-sm text-cream/50">Se habla español.</p>
+  </div>
+  <div>
+   <p class="text-xs font-semibold uppercase tracking-wide text-cream/40">Explore</p>
+   <ul class="mt-3 space-y-2 text-sm">
+    <li><a href="#services" class="hover:text-sun">Services</a></li>
+    <li><a href="#special" class="hover:text-sun">New patients</a></li>
+    <li><a href="#doctors" class="hover:text-sun">Meet the doctors</a></li>
+    <li><a href="#book" class="hover:text-sun">Book online</a></li>
+   </ul>
+  </div>
+  <div>
+   <p class="text-xs font-semibold uppercase tracking-wide text-cream/40">Contact</p>
+   <ul class="mt-3 space-y-2 text-sm">
+    <li><a href="tel:+18132699360" class="hover:text-sun">(813) 269-9360</a></li>
+    <li><a href="mailto:dravila@sunshinedentistrytampa.com" class="hover:text-sun break-all">dravila@sunshinedentistrytampa.com</a></li>
+    <li class="text-cream/50">14953 N Florida Ave, Tampa</li>
+   </ul>
+  </div>
+ </div>
+ <div class="mx-auto mt-12 flex max-w-6xl flex-col items-center justify-between gap-3 border-t border-cream/10 px-5 pt-6 text-center text-xs text-cream/40 sm:flex-row">
+  <p>© 2026 Sunshine Dentistry. All rights reserved.</p>
+  <p class="flex gap-4"><a href="#" class="hover:text-cream/70">Privacy Policy</a><a href="#" class="hover:text-cream/70">Terms</a></p>
+ </div>
+</footer>
+
+<!-- ================= FLOATING ASSISTANT ================= -->
+<div id="fab-wrap" class="fixed bottom-4 right-4 z-50 flex max-w-[calc(100vw-2rem)] flex-col items-end gap-3">
+ <div id="fab-panel" class="hidden w-[min(21rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-lift">
+  <div class="flex items-center gap-3 bg-ink px-4 py-3 text-cream">
+   <span class="grid h-8 w-8 place-items-center rounded-full bg-sun text-sm font-bold text-ink">☀</span>
+   <div class="flex-1"><p class="text-sm font-semibold">Sunshine Assistant</p><p class="flex items-center gap-1.5 text-[11px] text-cream/60"><span class="h-1.5 w-1.5 rounded-full bg-pine"></span>Online now</p></div>
+   <button id="fab-x" class="text-cream/60 hover:text-cream" aria-label="Close">✕</button>
+  </div>
+  <div id="fab-msgs" class="flex max-h-72 flex-col gap-2.5 overflow-y-auto p-4"></div>
+  <div class="border-t border-ink/[0.07] p-3">
+   <div class="flex flex-wrap gap-1.5">
+    <button class="fab-q rounded-full border border-ink/10 px-3 py-1.5 text-[11px] text-ink hover:border-sun">Is the whitening really free?</button>
+    <button class="fab-q rounded-full border border-ink/10 px-3 py-1.5 text-[11px] text-ink hover:border-sun">¿Hablan español?</button>
+    <button class="fab-q rounded-full border border-ink/10 px-3 py-1.5 text-[11px] text-ink hover:border-sun">Do you do Botox?</button>
+   </div>
+  </div>
+ </div>
+ <button id="fab" class="flex items-center gap-2.5 rounded-full bg-ink px-5 py-3.5 text-sm font-semibold text-cream shadow-lift transition-transform hover:scale-105">
+  <span class="grid h-6 w-6 place-items-center rounded-full bg-sun text-xs font-bold text-ink">☀</span>
+  Ask us anything
+ </button>
+</div>
+
+<script>
+/* ---------- icons (dental-specific, consistent 1.5 stroke) ---------- */
+var I={
+ tooth:'<path d="M12 4c-2.6 0-4.4 1.1-5.7 1.1S4.6 4.4 3.9 5.5C3 7 3.3 9.4 4.3 12.3c.7 2.1 1 4 1.4 5.9.3 1.3.7 2.8 1.8 2.8s1.3-1.4 1.6-2.9c.2-1.4.5-2.7 1.1-2.7h3.6c.6 0 .9 1.3 1.1 2.7.3 1.5.4 2.9 1.6 2.9s1.5-1.5 1.8-2.8c.4-1.9.7-3.8 1.4-5.9 1-2.9 1.3-5.3.4-6.8-.7-1.1-1.6-.4-2.4-.4S14.6 4 12 4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>',
+ sparkleTooth:'<path d="M12 5c-2 0-3.4.9-4.5.9S5.7 5.2 5 6.3C4.3 7.5 4.6 9.4 5.4 11.7c.5 1.6.8 3.1 1.1 4.6.2 1 .5 2.2 1.4 2.2s1-1.1 1.2-2.2c.2-1.1.4-2.1.9-2.1h2.8c.5 0 .7 1 .9 2.1.2 1.1.3 2.2 1.2 2.2s1.1-1.2 1.4-2.2c.3-1.5.6-3 1.1-4.6.8-2.3 1.1-4.2.4-5.4-.5-1.1-1.4-.4-2-.4S14 5 12 5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M18.5 3l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6L16.3 5.2l1.6-.6.6-1.6Z" fill="currentColor"/>',
+ veneer:'<path d="M8 4c-2 0-3 1.5-3 4 0 4 1 7 3 12 .5 1.2 1 2 1.5 2s.8-.8 1-2M8 4c1.5 0 2.5 1 4 1s2.5-1 4-1c2 0 3 1.5 3 4 0 4-1 7-3 12-.5 1.2-1 2-1.5 2s-.8-.8-1-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>',
+ align:'<path d="M4 9h16M4 9v6M20 9v6M4 15h16M8 9v6M12 9v6M16 9v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>',
+ implant:'<path d="M12 3c1.6 0 2.7 1.1 2.7 2.7 0 1.9-1 2.5-1.3 4.1-.2 1.5-.4 2.9-.6 4.3-.1 1-.3 2-.8 2s-.7-1-.8-2c-.2-1.4-.4-2.8-.6-4.3-.3-1.6-1.3-2.2-1.3-4.1C8.4 4.1 9.5 3 12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.6 16h4.8M9.9 18.5h4.2M9.4 20.5h5.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>',
+ bolt:'<path d="M13 3 5 14h6l-1 7 8-11h-6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>',
+ syringe:'<path d="M4 20l4-4M18 2l4 4M17 7l-8 8-3 1 1-3 8-8 2 2ZM14 6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>',
+ shield:'<path d="M12 3l8 3.5v5c0 5-3.4 8-8 9.5-4.6-1.5-8-4.5-8-9.5v-5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>',
+ clock:'<circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>',
+ cal:'<rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>',
+ chat:'<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.4A8 8 0 1 1 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>',
+ globe:'<circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18" stroke="currentColor" stroke-width="1.5"/>',
+ heart:'<path d="M12 20s-7-4.3-7-9.3A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.7c0 5-7 9.3-7 9.3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>',
+ grad:'<path d="M12 4 2 9l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>',
+ star:'<path d="M12 3l2.5 5.3 5.5.8-4 4 1 5.6L12 16l-5 2.7 1-5.6-4-4 5.5-.8L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>',
+ check:'<path d="M5 12.5l4 4 10-10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>'
+};
+function ic(n,c){return '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="'+(c||'')+'">'+I[n]+'</svg>';}
+
+/* ---------- services (their real specialties) ---------- */
+var S=[
+ ["tooth","General & Preventive","Cleanings, exams, X-rays, fillings and gum care — the routine that keeps your smile healthy.","Start here"],
+ ["sparkleTooth","Cosmetic & Whitening","Smile makeovers and our signature lifetime whitening. Dr. Avila treats every case as a cosmetic case.","Free for new patients"],
+ ["veneer","Veneers & Crowns","Life-like ceramic crowns and custom veneers for a flawless, natural look.","Dr. Avila's specialty"],
+ ["align","Invisalign","Straighten your smile discreetly. Dr. Avila is a certified Invisalign provider.","Free consult"],
+ ["implant","Implants & Restorative","Dental implants, crowns and fillings that restore both function and appearance.","Lasts a lifetime"],
+ ["syringe","Botox","New at Sunshine — cosmetic Botox from a provider who knows facial anatomy. From $11/unit.","Now offering"]
+];
+document.getElementById('svc').innerHTML=S.map(function(s){
+ return '<a href="#book" class="group flex h-full flex-col rounded-2xl bg-white p-7 ring-1 ring-ink/[0.05] transition-all hover:ring-sun/50 hover:shadow-soft">'
+ +'<span class="grid h-12 w-12 place-items-center rounded-xl bg-sun-soft text-sun-deep transition-colors group-hover:bg-sun group-hover:text-ink">'+ic(s[0])+'</span>'
+ +'<span class="mt-5 text-[11px] font-semibold uppercase tracking-[0.14em] text-pine">'+s[3]+'</span>'
+ +'<h3 class="mt-1.5 font-display text-xl text-ink">'+s[1]+'</h3>'
+ +'<p class="mt-2 flex-1 text-sm leading-relaxed text-sky">'+s[2]+'</p>'
+ +'<span class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-ink">Book this <span class="transition-transform group-hover:translate-x-1">→</span></span></a>';
+}).join('');
+
+/* ---------- new patient special list ---------- */
+var SP=[["check","Comprehensive dental exam"],["check","Oral cancer screening"],["check","Digital full-mouth & panoramic X-rays"],["check","A treatment plan in plain language"]];
+document.getElementById('special-list').innerHTML=SP.map(function(x){
+ return '<div class="flex items-center gap-2.5 text-sm text-cream/85"><span class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-sun/20 text-sun">'+ic(x[0])+'</span>'+x[1]+'</div>';
+}).join('');
+
+/* ---------- credentials ---------- */
+var CR=[["grad","DMD, University of Florida"],["align","Invisalign certified provider"],["star","American & Florida Dental Assn."],["heart","Volunteers care in FL & the Caribbean"]];
+document.getElementById('creds').innerHTML=CR.map(function(c){
+ return '<li class="flex items-center gap-3 rounded-xl bg-white/[0.06] px-4 py-3 text-sm text-cream ring-1 ring-cream/10">'
+ +'<span class="text-sun">'+ic(c[0])+'</span>'+c[1]+'</li>';
+}).join('');
+
+/* ---------- assistant features ---------- */
+var AF=[["bolt","Answers in seconds","No form, no callback, no waiting."],["globe","English & español","Same warm tone in both languages."],["cal","Books appointments","Hands patients straight to the calendar."],["clock","Never off duty","Nights, weekends, holidays."]];
+document.getElementById('afeat').innerHTML=AF.map(function(f){
+ return '<div class="flex gap-3"><span class="mt-0.5 shrink-0 text-pine">'+ic(f[0])+'</span>'
+ +'<div><dt class="text-sm font-semibold text-ink">'+f[1]+'</dt><dd class="mt-0.5 text-sm text-sky">'+f[2]+'</dd></div></div>';
+}).join('');
+
+/* ---------- reviews (real, from their site & Yelp) ---------- */
+var R=[
+ ["I had a tooth extraction done and my experience was absolutely amazing. Dr. Ávila was wonderful — gentle, professional, and made me feel completely at ease. The experience was next level!","Anny B."],
+ ["I highly recommend this office for your family's needs. I personally have PTSD from all medical facilities and they restored my faith during my visit. Awesome staff and doctors.","Sandy C."],
+ ["I've been coming here for over 10 years, and every visit is just as great as the last. The staff is friendly, professional, and truly cares about patient comfort.","Renu J."]
+];
+document.getElementById('revs').innerHTML=R.map(function(r){
+ return '<figure class="flex h-full flex-col rounded-2xl bg-white p-7 ring-1 ring-ink/[0.05]">'
+ +'<span class="text-sun">★★★★★</span>'
+ +'<blockquote class="mt-5 flex-1 leading-relaxed text-ink/85">“'+r[0]+'”</blockquote>'
+ +'<figcaption class="mt-6 border-t border-ink/[0.08] pt-4 text-sm font-semibold text-ink">— '+r[1]+'</figcaption></figure>';
+}).join('');
+
+/* ---------- booking reasons ---------- */
+var RE=[["New patient exam","$99 — exam, X-rays, screening & free whitening"],["Cleaning & checkup","Routine preventive care"],["Cosmetic consult","Veneers, Invisalign, whitening or a full makeover"],["Botox","Cosmetic Botox from $11/unit"]];
+document.getElementById('reasons').innerHTML=RE.map(function(r){
+ return '<li class="border-l-2 border-sun/50 pl-4"><p class="text-sm font-semibold">'+r[0]+'</p><p class="text-sm text-cream/60">'+r[1]+'</p></li>';
+}).join('');
+
+/* ---------- hours ---------- */
+var H=[["Monday","9:00 AM – 5:00 PM"],["Tuesday","11:00 AM – 7:00 PM"],["Wednesday","9:00 AM – 5:00 PM"],["Thursday","11:00 AM – 7:00 PM"],["Friday","Closed"],["Saturday","9:00 AM – 3:00 PM"],["Sunday","Closed"]];
+document.getElementById('hours').innerHTML=H.map(function(h){
+ return '<p class="flex max-w-xs justify-between gap-8 text-ink"><span>'+h[0]+'</span><span class="text-sky">'+h[1]+'</span></p>';
+}).join('');
+
+/* ---------- sticky header ---------- */
+var hdr=document.getElementById('hdr');
+function onScroll(){ hdr.className='fixed inset-x-0 top-0 z-50 transition-colors '+(window.scrollY>12?'bg-cream/90 backdrop-blur-md shadow-[0_1px_0_rgba(38,35,28,.07)]':'bg-transparent'); }
+window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+/* ---------- mobile nav ---------- */
+(function(){var b=document.getElementById('burger'),m=document.getElementById('mnav');
+ b.onclick=function(){var o=!m.classList.contains('hidden');m.classList.toggle('hidden');b.setAttribute('aria-expanded',String(!o));};
+ [].forEach.call(m.querySelectorAll('a'),function(a){a.onclick=function(){m.classList.add('hidden');};});
+})();
+
+/* ---------- reveal ---------- */
+[].forEach.call(document.querySelectorAll('.reveal'),function(el){
+ new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');o.disconnect();}});},{threshold:.15}).observe(el);
+});
+
+/* ---------- section chat demo ---------- */
+var C=[["them","Is the teeth whitening really free?"],["bot","It is — free whitening for new patients, and you can keep topping it up for life as long as you stay with us. Want me to book your new-patient visit?"],["them","¿Hablan español?"],["bot","¡Claro que sí! El equipo de Sunshine habla español. ¿Le gustaría agendar una cita con la Dra. Ávila?"],["them","Do you do Botox now?"],["bot","We do! Cosmetic Botox starts at $11/unit, done by a provider who knows facial anatomy. The next opening is Tuesday at 5:20 PM — shall I hold it?"]];
+var box=document.getElementById('chat');
+function bub(f,t){var d=document.createElement('div');d.className=(f==='them'?'self-end rounded-br-md bg-sun-soft':'self-start rounded-bl-md bg-pine-soft')+' max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed text-ink';d.textContent=t;box.appendChild(d);}
+function typ(){var d=document.createElement('div');d.id='ty';d.className='self-start rounded-2xl rounded-bl-md bg-pine-soft px-4 py-3';d.innerHTML='<span class="flex gap-1"><span class="dot h-1.5 w-1.5 rounded-full bg-sky"></span><span class="dot h-1.5 w-1.5 rounded-full bg-sky" style="animation-delay:.15s"></span><span class="dot h-1.5 w-1.5 rounded-full bg-sky" style="animation-delay:.3s"></span></span>';box.appendChild(d);}
+var started=false;
+new IntersectionObserver(function(e){if(e[0].isIntersecting&&!started){started=true;run();}},{threshold:.3}).observe(box);
+function run(){var i=0;(function step(){if(i>=C.length)return;bub('them',C[i][1]);i++;setTimeout(function(){typ();setTimeout(function(){var t=document.getElementById('ty');if(t)t.remove();bub('bot',C[i][1]);i++;setTimeout(step,1500);},1400);},500);})();}
+
+/* ---------- floating assistant ---------- */
+(function(){
+ var fab=document.getElementById('fab'),panel=document.getElementById('fab-panel'),x=document.getElementById('fab-x'),m=document.getElementById('fab-msgs');
+ var Q={
+  "Is the whitening really free?":"Yes — free teeth whitening for new patients, and you can keep it topped up for life while you're a patient. It's one of our most popular perks.",
+  "¿Hablan español?":"¡Sí! Todo el equipo habla español, y con gusto agendamos su cita con la Dra. Ávila. ¿Le gustaría reservar?",
+  "Do you do Botox?":"We do — cosmetic Botox from $11/unit, done by a provider who understands facial anatomy. Want me to find you a time?"
+ };
+ function add(f,t){var d=document.createElement('div');d.className=(f==='me'?'self-end rounded-br-md bg-sun-soft':'self-start rounded-bl-md bg-pine-soft')+' max-w-[85%] rounded-2xl px-3.5 py-2.5 text-[13px] leading-relaxed text-ink';d.textContent=t;m.appendChild(d);m.scrollTop=m.scrollHeight;}
+ fab.onclick=function(){panel.classList.toggle('hidden');if(m.children.length===0)setTimeout(function(){add('bot',"Hi there! I'm the Sunshine assistant. Ask me about the free whitening, insurance, Botox or booking — en inglés o español.");},300);};
+ x.onclick=function(){panel.classList.add('hidden');};
+ [].forEach.call(document.querySelectorAll('.fab-q'),function(b){b.onclick=function(){add('me',b.textContent);setTimeout(function(){add('bot',Q[b.textContent]);},700);};});
+})();
+
+/* ---------- booking calendar (day-aware to their real hours) ---------- */
+(function(){
+ var days=document.getElementById('cal-days'),slots=document.getElementById('cal-slots'),
+     label=document.getElementById('slot-label'),confirm=document.getElementById('confirm');
+ // Fri (3,10,17,24,31) + Sun (5,12,19,26) closed
+ var closed=[3,5,10,12,17,19,24,26,31], picked=14;
+ var names=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+ function build(){
+  var h='';for(var b=0;b<3;b++)h+='<span></span>';
+  for(var d=1;d<=31;d++){
+   var off=closed.indexOf(d)>-1;
+   h+='<button data-d="'+d+'" '+(off?'disabled':'')+' class="calday grid h-10 place-items-center rounded-lg text-sm transition-colors '
+    +(off?'text-sky/30 cursor-not-allowed':(d===picked?'bg-ink text-cream font-semibold':'bg-white text-ink hover:bg-sun-soft'))+'">'+d+'</button>';
+  }
+  days.innerHTML=h;
+  [].forEach.call(days.querySelectorAll('.calday:not([disabled])'),function(b){b.onclick=function(){picked=+b.dataset.d;build();fill();};});
+ }
+ function fill(){
+  var dt=new Date(2026,6,picked),dow=dt.getDay();
+  // Tue/Thu 11-7, Sat 9-3, Mon/Wed 9-5
+  var t=(dow===2||dow===4)?['11:00 AM','12:20 PM','2:00 PM','3:40 PM','5:20 PM','6:20 PM']
+        :dow===6?['9:00 AM','10:20 AM','11:40 AM','1:00 PM','2:00 PM']
+        :['9:00 AM','10:20 AM','11:40 AM','1:40 PM','3:00 PM','4:20 PM'];
+  label.textContent='Available times · '+names[dow]+', Jul '+picked;
+  slots.innerHTML=t.map(function(x,i){
+   return '<button class="slot rounded-lg border py-2.5 text-xs font-semibold transition-colors '
+   +(i===2?'border-sun bg-sun-soft text-ink':'border-ink/10 bg-white text-ink hover:border-sun')+'">'+x+'</button>';
+  }).join('');
+  [].forEach.call(slots.querySelectorAll('.slot'),function(b){
+   b.onclick=function(){
+    [].forEach.call(slots.querySelectorAll('.slot'),function(o){o.className='slot rounded-lg border border-ink/10 bg-white py-2.5 text-xs font-semibold text-ink hover:border-sun transition-colors';});
+    b.className='slot rounded-lg border border-sun bg-sun-soft py-2.5 text-xs font-semibold text-ink transition-colors';
+   };
+  });
+ }
+ confirm.onclick=function(){
+  confirm.textContent='✓ Booked — see you then';
+  confirm.className='mt-7 w-full rounded-full bg-pine py-4 text-sm font-semibold text-white';
+  setTimeout(function(){confirm.textContent='Confirm booking';confirm.className='mt-7 w-full rounded-full bg-ink py-4 text-sm font-semibold text-cream transition-colors hover:bg-sun-deep';},2600);
+ };
+ build();fill();
+})();
+</script>
+</body>
+</html>
